@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0">
+    <title>MyProfile</title>
+    <link rel="stylesheet" href="../css/profileStyle.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container d-flex justify-content-center">
+        <div class="card p-3 py-4">
+                <div class="text-center"> 
+                     <label for="avatar">
+                        <img src="../images/kitob.jpg" width="100" class="rounded-circle">
+                     </label>
+                    <input style='display: none;'type="file"  id="avatar" class="avatar" >
+                    <h3 class="mt-2">Full name</h3> 
+                    <div class="form-group mt-2">    
+                        <input type="text" name="name" id="your_name" value="<%= user.name %> "/>
+                    </div>
+                    <hr class="line">
+                     <h3 class="mt-2"><h5>My email</h5>
+                        <div class="form-group mt-2">    
+                            <input type="email" name="email" id="your_name" value="<%= user.email %> "/>
+                        </div>
+                    </h3>
+                    <div class="social-buttons mt-5"> <button class="neo-button"><i class="fa fa-facebook fa-1x"></i> </button> <button class="neo-button"><i class="fa fa-linkedin fa-1x"></i></button> <button class="neo-button"><i class="fa fa-google fa-1x"></i> </button> <button class="neo-button"><i class="fa fa-youtube fa-1x"></i> </button> <button class="neo-button"><i class="fa fa-twitter fa-1x"></i> </button> </div>
+                    <div class="profile mt-5"> 
+                        <button type='submit' class="profile_button px-5">Update Profile</button> 
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+    <script src="../js/me.js"></script>
+</body>
+</html>

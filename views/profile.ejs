@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="../css/profileStyle.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container d-flex justify-content-center">
+        <div class="card p-3 py-4">
+            <div class="text-center"> <img src="../images/kitob.jpg" width="100" class="rounded-circle">
+                <h3 class="mt-2"><%= user.name %> </h3> <span class="mt-1 clearfix">Backend Developer</span>
+                <!-- <div class="row mt-3 mb-3">
+                    <div class="col-md-4">
+                        <h5>Projects</h5> <span class="num">10</span>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Projects</h5> <span class="num">10</span>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Projects</h5> <span class="num">10</span>
+                    </div>
+                </div> -->
+                <hr class="line"> <small class="mt-4"><h5>My email</h5><%= user.email %> </small>
+                <div class="social-buttons mt-5"> <button class="neo-button"><i class="fa fa-facebook fa-1x"></i> </button> <button class="neo-button"><i class="fa fa-linkedin fa-1x"></i></button> <button class="neo-button"><i class="fa fa-google fa-1x"></i> </button> <button class="neo-button"><i class="fa fa-youtube fa-1x"></i> </button> <button class="neo-button"><i class="fa fa-twitter fa-1x"></i> </button> </div>
+                <div class="profile mt-5"> 
+                    <button class="profile_button px-5">Subscribe!</button> 
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
