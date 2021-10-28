@@ -1,13 +1,13 @@
 const jwt =  require('jsonwebtoken')
-const {SECRET_KEY} = require('../config')
+// const {SECRET_KEY} = require('../config')
 
 function generateToken(data){
-    const token = jwt.sign(data, SECRET_KEY)
+    const token = jwt.sign(data, 'fazliddin')
     return token
 }
 
 function verifyToken(token){
-    const decoded = jwt.verify(token, SECRET_KEY)
+    const decoded = jwt.verify(token, 'fazliddin')
     return decoded
 }
 

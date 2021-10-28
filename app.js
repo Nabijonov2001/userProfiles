@@ -1,10 +1,11 @@
 const express = require('express')
 const morgan = require('morgan')
 const helmet = require('helmet')
+const uploadfile = require('express-fileupload')
 const cookieParser = require('cookie-parser')
 const fs = require('fs')
 const path = require('path')
-const { PORT } = require('./config')
+// const { PORT } = require('./config')
 const app = express()
 
 
@@ -21,10 +22,14 @@ app.use('/api',express.static('public'))
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 app.use(cookieParser())
+app.use(uploadfile())
 app.use(morgan('tiny'))
 app.use(helmet())
 
 app.get('/api', (req, res)=>{
+    res.redirect('/api/signup')
+})
+app.get('/', (req, res)=>{
     res.redirect('/api/signup')
 })
 // ALL ROUTES
@@ -38,6 +43,7 @@ fs.readdir(path.join(__dirname, 'routes'), (err, files)=>{
     })
 })
 
+const PORT = 3000
 
 // PORT CONNECTION
 app.listen(PORT, ()=>{

@@ -1,13 +1,20 @@
-let imageInput = document.querySelector('#avatar')
-let your_name = document.querySelectorAll('#your_name')
-        imageInput.addEventListener('change', (e)=>{
-            let file = e.target.files[0]
-            console.log(file)
-        })
 
-        your_name.addEventListener('change', (e)=>{
-            let yourname = e.target.value
-            console.log(yourname)
-        })
+let file = document.querySelector('#avatar')
+let fullname = document.querySelector('#your_name')
+let email = document.querySelector('#email')
+let submit = document.querySelector('.profile_button')
 
-        
+submit.addEventListener('click', (e)=>{
+    fetch('/api/users/me', {
+        method:'put',
+        headers:{
+            'Content-Type':'application/json'
+        },
+        body:JSON.stringify({
+            name:fullname.value,
+            email:email.value
+        })
+    }).then(res=>res.json()).then(data=>console.log(data)).catch(e=>console.log(e))
+})
+
+ 

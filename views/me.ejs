@@ -16,7 +16,7 @@
                      <label for="avatar">
                         <img src="../images/kitob.jpg" width="100" class="rounded-circle">
                      </label>
-                    <input style='display: none;'type="file"  id="avatar" class="avatar" >
+                    <input style='display: none;' type="file"  id="avatar" name="file" >
                     <h3 class="mt-2">Full name</h3> 
                     <div class="form-group mt-2">    
                         <input type="text" name="name" id="your_name" value="<%= user.name %> "/>
@@ -24,7 +24,7 @@
                     <hr class="line">
                      <h3 class="mt-2"><h5>My email</h5>
                         <div class="form-group mt-2">    
-                            <input type="email" name="email" id="your_name" value="<%= user.email %> "/>
+                            <input type="email" name="email" id="email" value="<%= user.email %> "/>
                         </div>
                     </h3>
                     <div class="social-buttons mt-5"> <button class="neo-button"><i class="fa fa-facebook fa-1x"></i> </button> <button class="neo-button"><i class="fa fa-linkedin fa-1x"></i></button> <button class="neo-button"><i class="fa fa-google fa-1x"></i> </button> <button class="neo-button"><i class="fa fa-youtube fa-1x"></i> </button> <button class="neo-button"><i class="fa fa-twitter fa-1x"></i> </button> </div>
